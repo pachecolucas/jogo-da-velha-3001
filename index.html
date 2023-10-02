@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TicTacToe</title>
+        <style>
+            td {
+                width: 100px;
+                height: 100px;
+                font-size: 80px;
+                background: grey;
+                text-align: center;
+                color: white;
+                cursor: pointer;
+            }
+            td:hover {
+                background: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+       <h1>Tic Tac Toe</h1>
+       <table>
+            <tr>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+            </tr>
+       </table>
+       <script>
+           let jogador = "X"
+           
+           function marcar(celula) {
+               celula.innerHTML = jogador
+               if (jogador == "X") {
+                    jogador = "O"
+               } else {
+                    jogador = "X"
+               }
+            }
+       </script>
+    </body>
+</html>
